@@ -1,0 +1,39 @@
+package erigoStore;
+
+public class shirts {
+    private final int ryujin, hyewon, winter;
+    private int total;
+
+public shirts(int ryujin, int hyewon, int winter) {
+    this.ryujin = ryujin;
+    this.hyewon = hyewon;
+    this.winter = winter;
+}
+
+public int getRyujin() {
+    return ryujin;
+}
+public int getHyewon() {
+    return hyewon;
+}
+public int getWinter() {
+    return winter;
+}
+
+public void buyShirts(String mashiro, int jotaro) {
+    if (mashiro.equalsIgnoreCase("a")) {
+    total = getRyujin() * jotaro;
+    System.out.println("Total Price: "+total);
+  }
+
+  else if (mashiro.equalsIgnoreCase("b")) {
+    total = getHyewon() * jotaro;
+    System.out.println("Total Price: "+total);
+  }
+
+  else if (mashiro.equalsIgnoreCase("c")) {
+      total = getWinter() * jotaro;
+      System.out.println("Total Price: "+total);
+  }
+ }
+}
