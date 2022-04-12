@@ -1,0 +1,71 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.*;   
+
+class persegi {
+  int ryujin;
+  
+  persegi(int ryujin) {
+    this.ryujin = ryujin;
+  }
+  void countArea() {
+    int zoa = ryujin * ryujin;
+    System.out.println(zoa);
+  }
+}
+
+class segitiga {
+  int winter;
+  int joseph;
+
+  segitiga(int winter, int joseph) {
+    this.winter = winter;
+    this.joseph = joseph;
+  }
+  void countArea2() {
+    int aespa = (winter * joseph) / 2;
+    System.out.println(aespa);
+  }
+}
+
+class lingkaran {
+  int karina;
+
+  lingkaran(int karina) {
+    this.karina = karina;
+  }
+  void countArea3() {
+    if (karina % 7 == 0) {
+      int lily = (int) (22/7 * karina * karina);
+      System.out.println((double)lily);
+    }
+    else {
+      int jotaro = (int) (3.14 * karina * karina);
+      System.out.println((double)jotaro);
+    }
+    
+  }
+}
+
+ class Solution {
+  public static void main(String[] args) {
+    Scanner itzy = new Scanner(System.in);
+    int josuke = itzy.nextInt();
+
+    if (josuke == 1) {
+      persegi yoon = new persegi(itzy.nextInt());
+      yoon.countArea();
+    }
+    else if (josuke == 2) {
+      segitiga bermuda = new segitiga(itzy.nextInt(), itzy.nextInt());
+      bermuda.countArea2();
+    }
+    else if (josuke == 3) {
+       lingkaran hyewon = new lingkaran(itzy.nextInt());
+       hyewon.countArea3();
+    }
+    else {
+      System.out.println("Input yang anda masukan tidak sesuai");
+    }
+  }
+}
