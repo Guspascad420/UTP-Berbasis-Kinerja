@@ -1,0 +1,30 @@
+public class Solution {
+
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        public static boolean isPalindrome(int a) {
+        String xiaoting = Integer.toString(a);
+        char[] a1 = xiaoting.toCharArray();
+        int j = a1.length;
+        char[] b = new char[j];
+        for (int i = j - 1; i >= 0; i--) {
+            b[j-1-i] = a1[i];
+        }
+        if (Arrays.equals(a1, b)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+
+        }
+        public static void main(String[] args) {
+            Scanner ive = new Scanner(System.in);
+            int ryujin = ive.nextInt();
+            if (isPalindrome(ryujin)) {
+                System.out.println(ryujin + " adalah selde.");
+            }
+            else {
+                System.out.println(ryujin + " bukan selde.");
+            }
+        }
+    }
