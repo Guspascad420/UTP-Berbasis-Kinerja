@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void slide(String xiaoting, int mashiro) {
+    int[] zoa = new int[xiaoting.length()];
+
+     for (int i = 0; i < xiaoting.length(); i++) {
+      if (xiaoting.charAt(i) >= 'a' && xiaoting.charAt(i) <= 'z') {
+        zoa[i] = (int) xiaoting.charAt(i) + mashiro;
+        if (zoa[i] > 122) {
+          zoa[i] -= 26;
+        }
+      }
+      else if (xiaoting.charAt(i) >= 'A' && xiaoting.charAt(i) <= 'Z') {
+        zoa[i] = (int) xiaoting.charAt(i) + mashiro;
+        if (zoa[i] > 90) {
+          zoa[i] -= 26;
+        }
+     }
+     else {
+      zoa[i] = (int) xiaoting.charAt(i);
+     }
+    }
+     
+     String yena = "";
+     for (int i = 0; i < zoa.length; i++) {
+       yena += (char) zoa[i];
+     }
+     System.out.println(yena);
+   }
+  public static void main(String[] args) {
+    Scanner ive = new Scanner(System.in);
+    String yujin = ive.nextLine();
+    int rei = ive.nextInt();
+    slide(yujin, rei);
+  }
+}
