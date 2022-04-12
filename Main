@@ -1,0 +1,44 @@
+package erigoStore;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner ive = new Scanner(System.in);
+        shirts normal = new shirts(100_000, 125_000, 175_000);
+        shirts discount = new shirts(95_000, 120_000, 160_000);
+
+        System.out.println("Pilih jenis baju yang akan anda beli: ");
+        String type = ive.next();
+
+        if (type.equalsIgnoreCase("a")) {
+            int joseph = ive.nextInt();
+            if (joseph < 100) {
+                normal.buyShirts(type, joseph);
+            }
+            else {
+                discount.buyShirts(type, joseph);
+            }
+        }
+
+        else if (type.equalsIgnoreCase("b")) {
+            int joseph = ive.nextInt();
+            if (joseph < 100) {
+                normal.buyShirts(type, joseph);
+            }
+            else {
+                discount.buyShirts(type, joseph);
+            }
+        }
+
+        else if (type.equalsIgnoreCase("b")) {
+            int joseph = ive.nextInt();
+            if (joseph < 100) {
+                normal.buyShirts(type, joseph);
+            }
+            else {
+                discount.buyShirts(type, joseph);
+            }
+        }
+    }
+}
