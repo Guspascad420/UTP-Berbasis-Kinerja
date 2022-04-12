@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class Main {
+    static Scanner ive = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        System.out.println("Ida Bagus Pascad Wijanata");
+        System.out.println("21515070011029");
+        System.out.println();
+
+        DataMerchant.merc.add(new Merchant("Bakso Pak Sahid", "Bakso", 8_000));
+        DataMerchant.merc.add(new Merchant("Nasgor Mblebes", "Nasi Goreng Jawa", 10_000));
+        DataMerchant.merc.add(new Merchant("Ayam Geprek Kak Ros", "Ayam Kota Ekstra Nasi", 10_000));
+        DataMerchant.merc.add(new Merchant(ive.nextLine(), ive.nextLine(), ive.nextDouble()));
+        DataMerchant.tampilData();
+        System.out.println();
+
+        System.out.println("Pilih Menu  :");
+        System.out.println("1. Cari Merchant");
+        System.out.println("2. Update Merchant");
+        int pilih = ive.nextInt();
+
+        if (pilih == 1) {
+            System.out.print("Nama Merchant   :");
+            DataMerchant.tampilMerchant(DataMerchant.cariMerchant(DataMerchant.merc, DataMerchant.ive.nextLine()));
+        }
+        else if (pilih == 2) {
+            DataMerchant.updateMerchant(DataMerchant.merc, DataMerchant.cariMerchant(DataMerchant.merc, DataMerchant.ive.nextLine()));
+            DataMerchant.tampilData();
+        }
+    }
+}
